@@ -122,6 +122,11 @@ class MainActivity : AppCompatActivity() {
         if (cursor != null) {
             cursor!!.close()
         }
+
+        if (timer != null) {
+            timer?.cancel()
+            timer = null
+        }
     }
 
     override fun onRequestPermissionsResult(requestCode: Int, permissions: Array<String>, grantResults: IntArray) {
